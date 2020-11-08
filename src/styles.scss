@@ -23,6 +23,8 @@ header{
     }
     a.logo{
         font-weight: bold;
+        user-select: none;
+        cursor: default;
     }
     nav{
         float: right;

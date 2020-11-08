@@ -1,1 +1,19 @@
-<p>home works!</p>
+<h1>Velkommen til oversikt av lån</h1>
+
+<div class="play-contatiner">
+    <p>
+       <input type="text" [(ngModel)]="name"><br>
+       <strong>Du sa: </strong>  {{ name }}
+    </p>
+      
+    <p> Du har klikket på<span (click)="countClick()">denne</span>{{ clickCounter}} ganger.</p>
+</div>
+
+<ul *ngIf="lans"> Lån:
+    <li *ngFor="let lan of lans">
+        <p class="name"> {{ lan.lanetakere}}</p>
+        <p class="country"> {{ lan.lanebelop }}</p>
+        <p class="site">{{ lan.notat }}</p>
+    </li>
+</ul>
+
