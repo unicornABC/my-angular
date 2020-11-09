@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   title = 'json-file-read-angular';
   lans: any = [];
 
-  constructor (private httpClient: HttpClient){}
+  constructor (private httpClient: HttpClient){} // Works in the console.
   ngOnInit(){
     this.httpClient.get("assets/json/lan.json").subscribe(data =>{
       console.log(data);

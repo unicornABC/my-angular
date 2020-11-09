@@ -1,19 +1,15 @@
-<h1>Velkommen til oversikt av lån</h1>
 
-<div class="play-contatiner">
-    <p>
-       <input type="text" [(ngModel)]="name"><br>
-       <strong>Du sa: </strong>  {{ name }}
-    </p>
-      
-    <p> Du har klikket på<span (click)="countClick()">denne</span>{{ clickCounter}} ganger.</p>
-</div>
+    <h1>
+        Oversikt over lånene:
+    </h1>
 
-<ul *ngIf="lans"> Lån:
-    <li *ngFor="let lan of lans">
-        <p class="name"> {{ lan.lanetakere}}</p>
-        <p class="country"> {{ lan.lanebelop }}</p>
-        <p class="site">{{ lan.notat }}</p>
-    </li>
-</ul>
+    <ul *ngFor="let items of lanList">
+       <li>
+                <p class="user"><span>Lånetakerne:</span> {{items.lanetakere}}</p>
+                <p class="total"><span>Beløp lånt:</span> {{items.lanebelop}}</p>
+                <p class="notat"><span>Notat:</span> {{items.notat}}</p>
+        </li>
+    </ul>
+
+
 
