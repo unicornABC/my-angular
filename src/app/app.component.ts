@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     this.httpClient.get("assets/json/lan.json").subscribe(data =>{
       console.log(data);
       this.lans = data;
+
     })
   }
 }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import countries from './_files/countries.json';
 import lan from './_files/lan.json';
 
 @Component({
@@ -11,7 +10,6 @@ import lan from './_files/lan.json';
 
 export class HomeComponent implements OnInit {
   title = 'json-file-read-angular';
-  public countryList:{name:String, code:String}[]=countries;
   public lanList:{notat:String}[]=lan;
 
   clickCounter: number = 0; 

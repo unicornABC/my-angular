@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
 
 $primary: #F56058;
+$grey: #333;
 
 *{
     margin: 0;
@@ -66,4 +67,44 @@ header{
     }
 }
 
+.editLoan{
+    background-color: $primary;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 1rem;
+    padding: 1em;
+
+    position: fixed;
+    bottom: 2em;
+    right: 2em; 
+    opacity: 80%;
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover{
+        background: darken($primary, 10%);
+        border-radius: 50%;
+        padding: .9em;
+
+    }
+}
+
+@media only screen and (max-width: 827px){
+    .editLoan a{
+        font-size: 0.8em;
+    }
+}
+
 html, body { height: 100%; }
+
+h1,p {
+   font-family: 'Nunito', 'sans-serif';
+}
+
+h1{
+    text-transform: uppercase;
+    color: $grey;
+}

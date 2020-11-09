@@ -1,13 +1,15 @@
 
     <h1>
-        Oversikt over lånene:
+        Oversikt over lånene
     </h1>
 
     <ul *ngFor="let items of lanList">
        <li>
-                <p class="user"><span>Lånetakerne:</span> {{items.lanetakere}}</p>
+                <p class="user"><span>Lånetakerne:</span><br><br> {{items.lanetakere}}</p>
                 <p class="total"><span>Beløp lånt:</span> {{items.lanebelop}}</p>
                 <p class="notat"><span>Notat:</span> {{items.notat}}</p>
+                <button href="#" routerLink="/edit"> Endre ditt lån
+                </button>
         </li>
     </ul>
 
